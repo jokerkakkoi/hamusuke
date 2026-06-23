@@ -4,10 +4,12 @@ import { Outlet } from "react-router";
 
 function MainLayout() {
   return (
-    <div>
-      <Topbar/>
-      <Outlet/>
-      <BottomBar/>
+    <div className="flex min-h-screen flex-col">
+      <Topbar />
+      <main className="flex-1 overflow-y-auto pb-16">
+        <Outlet />
+      </main>
+      <BottomBar />
     </div>
   );
 }
